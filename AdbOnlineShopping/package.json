@@ -1,0 +1,12 @@
+{
+    "name": "adbonlineshopping",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "node sever.js"
+    },
+    "dependencies": {
+        "express": "4.13.3"
+    },
+    "author": "Kathryn Hodge",
+    "license": "ISC"
+}
