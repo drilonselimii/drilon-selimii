@@ -1,0 +1,33 @@
+body{
+    background-color: lightgray;
+}
+.korniza{
+    border: solid;
+    width: 30%;
+    margin-left: 35%;
+    background-color: darkgray;
+}
+.tss{
+    margin-top: 5px;
+    margin-left: 10%;
+}
+#id1{
+    text-align: center;
+}
+.inputet{
+    float: right;
+    margin-right: 10%;
+    width: 200px;
+}
+#butoni{
+    margin-left: 37%;
+    background-color: darkred;
+    color: white;
+    font-weight: bold;
+    margin-top: 3%;
+}
+#pershkrimi{
+    height: 30px;
+    margin-top: -3px;
+    
+}

@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Admini</title>
+  </head>
+<body>
+<h1 id="id1">Faqja ku admini inserton produktet</h1>
+<div class="korniza">
+<form action="/insert_data" method="post"><div class="tss">
+Emri: <input class="inputet" type="text" name="emri1" required/><br><br>
+&Ccedil;mimi: <input class="inputet" type="text" name="cmimi1" required /><br><br>
+Pesha: <input class="inputet" type="number" name="pesha1" required /><br><br>
+Pershkrimi: <input id="pershkrimi" class="inputet" type="text" name="pershkrimi1" required /><br><br>
+Ikona: <input class="inputet" type="file" name="ikona1" required /><br><br>
+Kategoria: <select class="inputet" name="kategoria1" required>
+    <option value="teknologji">Teknologji</option>
+    <option value="ora">Ora</option>
+    <option value="qanta">&Ccedil;anta</option>
+  </select><br><br>
+Nenategoria: <select class="inputet" name="nenkategoria1" >
+    <option value="null"></option>
+    <option value="meshkuj">Meshkuj</option>
+    <option value="femra">Femra</option>
+  </select><br><br>
+Madhesia: <input class="inputet" type="text" name="madhesia1" /><br><br>
+Ngjyra: <input class="inputet" type="text" name="ngjyra1" /><br><br>
+Oferta: <select class="inputet" name="oferta1" required>
+    <option value="1">True</option>
+    <option value="0">False</option>
+  </select><br><br>
+  <button id="butoni">Inserto</button>
+  </div>
+</form>
+</div>
+</body>
+</html>
