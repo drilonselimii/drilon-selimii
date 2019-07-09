@@ -17,7 +17,7 @@
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
 </head>
-<h1>{{arr}}</h1>
+
 <div class="fs_menu_overlay"></div>
 	<div class="hamburger_menu">
 		<div class="hamburger_close"><i class="fa fa-times" aria-hidden="true"></i></div>
@@ -91,199 +91,34 @@
 					<div class="product-grid" data-isotope='{ "itemSelector": ".product-item", "layoutMode": "fitRows" }'>
 
 
-				<!-- Product 1 -->
-
-				<div class="product-item teknologji">
+				
+                 {{#each results}}
+				<div class="product-item {{this.Kategoria}}">
 					<div class="product discount product_filter">
-						<div class="product_image">
-							<img src="images/74993.jpg" alt="">
+						<div class="product_image">			
+						<img src="{{this.Fotografia}}" alt="">
 						</div>
-					<div class="favorite favorite_left"></div>
-						<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-&euro;8.50</span></div>
+					<div class="favorite favorite_left"></div>					
 						<div class="product_bubble product_bubble_left product_bubble_green d-flex flex-column align-items-center"><span>Risi</span></div>
 						<div class="product_info">
-							<h6 class="product_name"><a href="single.html">Wifi mbush&euml;si i telefonit p&euml;r vetur&euml;</a></h6>
-							<div class="product_price">&euro;15.99<span>&euro;24.49</span></div>
+							<h6 class="product_name"><a href="single{{this.ProduktId}}">{{this.Emri}}</a></h6>
+							<div class="product_price">&euro;{{this.Cmimi}}</div>
 						</div>
 					</div>
 					<div class="red_button add_to_cart_button"><a href="#" class="snipcart-add-item" 
-						data-item-id="1"
-						data-item-name="Wifi mbush&euml;si"
-						data-item-price="15.99"
+						data-item-id="{{ProduktId}}"
+						data-item-name="{{Emri}}"
+						data-item-price="{{Cmimi}}"
 						data-item-max-quantity="5"
 						data-item-quantity-step="1"
-						data-item-weight="200"
-						data-item-url="https://adbonlineshopping.herokuapp.com/single.html"
-						data-item-image="images/74993.jpg"
-						data-item-description="Wifi mbush&euml;si i telefonit p&euml;r vetur&euml;"
+						data-item-weight="{{Pesha}}"
+						data-item-url="/api/produktet/{{ProduktId}}"
+						data-item-image="{{Fotografia}}"
+						data-item-description="{{Pershkrimi}}"
 						>Shto n&euml; kart&euml;</a></div>
 				</div>
-
-				<!-- Product 2 -->
-
-				<div class="product-item ora">
-					<div class="product discount product_filter">
-						<div class="product_image">
-							<img src="images/ora1m.png" alt="">
-						</div>
-					<div class="favorite favorite_left"></div>
-						<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-&euro;3.00</span></div>
-						<div class="product_info">
-							<h6 class="product_name"><a href="single.html">Or&euml; p&euml;r meshkuj</a></h6>
-							<div class="product_price">&euro;17.00<span>&euro;20.00</span></div>
-						</div>
-					</div>
-					<div class="red_button add_to_cart_button"><a href="#" class="snipcart-add-item" 
-						data-item-id="2"
-						data-item-name="Ore per meshkuj"
-						data-item-price="17"
-						data-item-max-quantity="5"
-						data-item-quantity-step="1"
-						data-item-weight="160"
-						data-item-url="/"
-						data-item-image="images/ora1f.png"
-						data-item-description="Or&euml; p&euml;r meshkuj"
-						>Shto n&euml; kart&euml;</a></div>
-				</div>
-
-				<!-- Product 3 -->
-
-				<div class="product-item ora">
-					<div class="product discount product_filter">
-						<div class="product_image">
-							<img src="images/ora1f.png" alt="">
-						</div>
-					<div class="favorite favorite_left"></div>
-						<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-&euro;3.00</span></div>
-						<div class="product_info">
-							<h6 class="product_name"><a href="single.html">Or&euml; p&euml;r femra</a></h6>
-							<div class="product_price">&euro;17.00<span>&euro;20.00</span></div>
-						</div>
-					</div>
-					<div class="red_button add_to_cart_button"><a href="#" class="snipcart-add-item" 
-						data-item-id="3"
-						data-item-name="Ore per femra"
-						data-item-price="17"
-						data-item-max-quantity="5"
-						data-item-quantity-step="1"
-						data-item-weight="160"
-						data-item-url="/"
-						data-item-image="images/ora1f.png"
-						data-item-description="Or&euml; p&euml;r femra"
-						>Shto n&euml; kart&euml;</a></div>
-				</div>
-
-				<!-- Product 4 -->
-
-				<div class="product-item ora">
-					<div class="product product_filter">
-						<div class="product_image">
-							<img src="images/ora2m.png" alt="">
-						</div>
-						<div class="favorite"></div>
-						<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-&euro;3.00</span></div>
-						<div class="product_info">
-							<h6 class="product_name"><a href="single.html">Or&euml; p&euml;r meshkuj</a></h6>
-							<div class="product_price">&euro;17.00<span>&euro;20.00</span></div>
-						</div>
-					</div>
-					<div class="red_button add_to_cart_button"><a href="#" class="snipcart-add-item" 
-						data-item-id="4"
-						data-item-name="Ore per meshkuj"
-						data-item-price="17"
-						data-item-max-quantity="5"
-						data-item-quantity-step="1"
-						data-item-weight="160"
-						data-item-url="/"
-						data-item-image="images/ora2f.png"
-						data-item-description="Or&euml; p&euml;r meshkuj"
-						>Shto n&euml; kart&euml;</a></div>
-				</div>
-
-				<!-- Product 5 -->
-
-				<div class="product-item ora">
-					<div class="product product_filter" >
-						<div class="product_image">
-							<img src="images/ora2f.png" alt="" style="margin-top:15px;">
-						</div>
-						<div class="favorite"></div>
-						<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-&euro;3.00</span></div>
-						<div class="product_info">
-							<h6 class="product_name"><a href="single.html">Or&euml; p&euml;r femra</a></h6>
-							<div class="product_price">&euro;17.00<span>&euro;20.00</span></div>
-						</div>
-					</div>
-					<div class="red_button add_to_cart_button"><a href="#" class="snipcart-add-item" 
-						data-item-id="5"
-						data-item-name="Ore per femra"
-						data-item-price="17"
-						data-item-max-quantity="5"
-						data-item-quantity-step="1"
-						data-item-weight="160"
-						data-item-url="/"
-						data-item-image="images/ora2f.png"
-						data-item-description="Or&euml; p&euml;r femra"
-						>Shto n&euml; kart&euml;</a></div>
-				</div>	
-
-				<!-- Product 6 -->
-
-				<div class="product-item qanta">
-					<div class="product product_filter">
-						<div class="product_image">
-							<img src="images/kuqe.png" alt="">
-						</div>
-						<div class="favorite"></div>
-						<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-&euro;2.00</span></div>
-						<div class="product_bubble product_bubble_left product_bubble_green d-flex flex-column align-items-center"><span>Risi</span></div>
-						<div class="product_info">
-							<h6 class="product_name"><a href="single.html">&Ccedil;ant&euml; sportive dhe shkollore</a></h6>
-							<div class="product_price">&euro;9.99<span>&euro;11.99</span></div>
-						</div>
-					</div>
-					<div class="red_button add_to_cart_button"><a href="#" class="snipcart-add-item" 
-						data-item-id="6"
-						data-item-name="Qante sportive dhe shkollore"
-						data-item-price="9.99"
-						data-item-max-quantity="5"
-						data-item-quantity-step="1"
-						data-item-weight="160"
-						data-item-url="/"
-						data-item-image="images/kuqe.png"
-						data-item-description="&Ccedil;ant&euml; sportive dhe shkollore "
-						>Shto n&euml; kart&euml;</a></div>
-				</div>	
-						
-				<!-- Product 7 -->
-
-				<div class="product-item qanta">
-						<div class="product product_filter">
-							<div class="product_image">
-								<img src="images/zeze.png" alt="">
-							</div>
-							<div class="favorite"></div>
-							<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-&euro;2.00</span></div>
-							<div class="product_bubble product_bubble_left product_bubble_green d-flex flex-column align-items-center"><span>Risi</span></div>
-							<div class="product_info">
-								<h6 class="product_name"><a href="single.html">&Ccedil;ant&euml; sportive dhe shkollore</a></h6>
-								<div class="product_price">&euro;9.99<span>&euro;11.99</span></div>
-							</div>
-						</div>
-						<div class="red_button add_to_cart_button"><a href="#" class="snipcart-add-item" 
-							data-item-id="6"
-							data-item-name="Qante sportive dhe shkollore"
-							data-item-price="9.99"
-							data-item-max-quantity="5"
-							data-item-quantity-step="1"
-							data-item-weight="160"
-							data-item-url="/"
-							data-item-image="images/zeze.png"
-							data-item-description="&Ccedil;ant&euml; sportive dhe shkollore "
-							>Shto n&euml; kart&euml;</a></div>
-					</div>	
-						
-
+			
+						{{/each}}
 		</div>
 		
 

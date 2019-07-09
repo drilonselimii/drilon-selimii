@@ -70,6 +70,8 @@
 
 			</div>
 		</div>
+{{#each results1}}
+
 
 		<div class="row">
 			<div class="col-lg-7">
@@ -78,31 +80,31 @@
 						<div class="col-lg-3 thumbnails_col order-lg-1 order-2">
 							<div class="single_product_thumbnails">
 								<ul>
-									<li><img src="images/74993.jpg" alt="" data-image="images/74993.jpg"></li>
-									<li class="active"><img src="images/wcharger1.jpg" alt="" data-image="images/wcharger1.jpg"></li>
-									<li><img src="images/wcharger2.jpg" alt="" data-image="images/wcharger2.jpg"></li>
+									<li><img src="{{this.foto1}}" alt="" data-image="{{this.foto1}}"></li>
+									<li class="active"><img src="{{this.foto2}}" alt="" data-image="{{this.foto2}}"></li>
+									<li><img src="{{this.foto3}}" alt="" data-image="{{this.foto3}}"></li>
 								</ul>
 							</div>
 						</div>
 						<div class="col-lg-9 image_col order-lg-2 order-1">
 							<div class="single_product_image">
-								<div class="single_product_image_background" style="background-image:url(images/74993.jpg)"></div>
+								<div class="single_product_image_background" style="background-image:url({{this.foto1}})"></div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			{{/each}}
 			<div class="col-lg-5">
 				<div class="product_details">
 					<div class="product_details_title">
-						<h2>Wifi mbush&euml;si i telefonit p&euml;r vetur&euml;</h2>
-						<p>Wifi mbush&euml;s i telefonit p&euml;r vetur&euml;. P&euml;rkrah&euml; modelet e reja t&euml; Iphone dhe Samsung, vendosja b&euml;het leht&euml; dhe vozitja &euml;sht&euml; m&euml; e sigurt.</p>
+						{{#each results2}}<h2>{{this.Pershkrimi}}</h2>{{/each}}
+						{{#each results1}}<p>{{this.pershkrimiShkurt}}</p>{{/each}}
 					</div>
 					<div class="free_delivery d-flex flex-row align-items-center justify-content-center">
 						<span class="ti-truck"></span><span>Transporti falas</span>
-					</div>
-					<div class="original_price">&euro;24.49</div>
-					<div class="product_price">&euro;15.99</div>
+					</div>					
+					{{#each results2}}<div class="product_price">&euro;{{this.Cmimi}}</div>
 					<ul class="star_rating">
 						<li><i class="fa fa-star" aria-hidden="true"></i></li>
 						<li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -119,22 +121,24 @@
 							<span class="plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
 						</div>
 						<div class="red_button add_to_cart_button"><a href="#" class="snipcart-add-item" 
-							data-item-id="1"
-							data-item-name="Mbush&euml;s"
-							data-item-price="15.99"
+							data-item-id="{{ProduktId}}"
+							data-item-name="{{Emri}}"
+							data-item-price="{{Cmimi}}"
 							data-item-max-quantity="3"
 							data-item-quantity-step="1"
-							data-item-weight="100"
-							data-item-url="https://adbonlineshopping.herokuapp.com/single.html"
-							data-item-image="images/74993.jpg"
-							data-item-description="Wifi mbush&euml;si i telefonit p&euml;r vetur&euml;">Shto n&euml; kart&euml;</a></div>
-						<div class="product_favorite d-flex flex-column align-items-center justify-content-center"></div>
+							data-item-weight="{{Pesha}}"
+							data-item-url="https://adbonlineshopping.herokuapp.com/single{{ProduktId}}"
+							data-item-image="{{Fotografia}}"
+							data-item-description="{{Pershkrimi}}">Shto n&euml; kart&euml;</a></div>
 					</div>
+					{{/each}}
 				</div>
 			</div>
 		</div>
 
 	</div>
+
+
 
 	<!-- Tabs -->
 
@@ -164,12 +168,12 @@
 									<h4>P&euml;rshkrimi</h4>
 								</div>
 								<div class="tab_text_block">
-									<h2>Wifi mbush&euml;si i telefonit p&euml;r vetur&euml;</h2>
-									<p>Mbush&euml;si p&euml;rkrah&euml; modelet e Iphone-it 8 e m&euml; lart, modelet me "S" t&euml; samsung. Si dhe modelet e reja te Huawei dhe Xiaomi.</p>
-								</div>
+									{{#each results2}}<h2>{{this.Emri}}</h2>{{/each}}
+								{{#each results1}}<p>{{this.pershkrimiDetajuar}}</p>
+								</div>{{/each}}
 								<div class="tab_image">
-									<img src="images/wcharger3.gif" alt="">
-								</div>
+								{{#each results1}}	<img src="{{this.foto4}}" alt="">
+								</div> {{/each}}<!--
 								<div class="tab_text_block">
 									<h2>Wifi mbush&euml;si i telefonit p&euml;r vetur&euml;</h2>
 									<p>Si&ccedil; shihet n&euml; foton e fundit, n&euml; momentin q&euml; vendoset gishti n&euml; pjes&euml;n e prapme te sensorit ai i hap krah&euml;t dhe e l&euml;shon telefonin.</p>
@@ -185,7 +189,7 @@
 								</div>
 								<div class="tab_image desc_last">
 									<img src="images/wcharger4.gif" alt="">
-								</div>
+								</div>-->
 							</div>
 						</div>
 					</div>
@@ -198,7 +202,7 @@
 								<div class="tab_title additional_info_title">
 									<h4>Informacione shtes&euml;</h4>
 								</div>
-								<p>Ngjyra:<span>P&euml;r momentin vet&euml;m ngjyra e hirt &euml;sht&euml; n&euml; dispozicion.</span></p>
+								{{#each results1}}<p><span>{{this.informacioneShtese}}</span></p>{{/each}}
 							</div>
 						</div>
 					</div>
@@ -290,11 +294,5 @@
 
 							</div>
 
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-
-	</div>
+						
+			
